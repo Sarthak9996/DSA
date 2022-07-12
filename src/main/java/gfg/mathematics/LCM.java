@@ -12,7 +12,7 @@ public class LCM {
 		System.err.println("Enter the second number");
 		int b = 1;
 		b = sc.nextInt();
-
+		sc.close();
 		System.err.println("LCM by naive method : " + lcmNaive(a, b));
 		System.err.println("LCM by hcf method : " + ((a * b) / hcf(a, b)));
 

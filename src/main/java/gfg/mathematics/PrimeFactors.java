@@ -9,6 +9,7 @@ public class PrimeFactors {
 		System.err.println("Enter the number");
 		int a = 2;
 		a = sc.nextInt();
+		sc.close();
 		primeFactorsbyNaive(a);
 		primeFactorbyEfficient(a);
 		primeFactorbyMoreEfficient(a);

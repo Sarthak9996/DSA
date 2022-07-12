@@ -9,7 +9,7 @@ public class PrimeNumber {
 		System.err.println("Enter the number");
 		int a = 2;
 		a = sc.nextInt();
-
+		sc.close();
 		System.err.println("Number is Prime by naive method : " + isPrimeNaive(a));
 		System.err.println("Number is Prime by optimized method : " + isPrimeOptimized(a));
 	}

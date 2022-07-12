@@ -9,6 +9,7 @@ public class CountDigitsInNumber {
 		System.err.println("Enter the number ");
 		int n = 10;
 		n = sc.nextInt();
+		sc.close();
 		System.err.println("Number of digits in the number by Iteration method : " + countDigits(n));
 		System.err.println("Number of digits in the number by String method : " + countDigitsByString(n));
 		System.err.println("Number of digits in the number by Recursion method : " + countDigitsByRecursion(n));

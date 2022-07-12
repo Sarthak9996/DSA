@@ -8,7 +8,7 @@ public class FactorialOfNumber {
 		System.err.println("Enter the number");
 		int n = 0;
 		n = sc.nextInt();
-
+		sc.close();
 		System.err.println("Factorial by iteration method : " + factorialByLoop(n));
 		System.err.println("Factorial by recursion method : " + factorialByRecursion(n));
 	}
@@ -27,6 +27,6 @@ public class FactorialOfNumber {
 	static Integer factorialByRecursion(int n) {
 		if (n == 0)
 			return 1;
-		return n * factorialByRecursion(n-1);
+		return n * factorialByRecursion(n - 1);
 	}
 }

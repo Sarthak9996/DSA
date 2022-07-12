@@ -10,6 +10,7 @@ public class SieveOfEratosthenes {
 		System.err.println("Enter the number");
 		int a = 3;
 		a = sc.nextInt();
+		sc.close();
 		printPrimes(a);
 		sieve(a);
 	}

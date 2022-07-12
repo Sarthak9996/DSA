@@ -8,6 +8,7 @@ public class TrailingZerosInFactorial {
 		System.err.println("Enter the number : ");
 		int n = 5;
 		n = sc.nextInt();
+		sc.close();
 		int factorial = factorialOfNumber(n);
 		System.err.println("Number of zeros by dividing by 10 method : " + countZerosBy10Method(factorial));
 		System.err.println("Number of zeros by dividing by 5 method : " + countZerosBy5Method(n));
