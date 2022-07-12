@@ -12,7 +12,7 @@ public class ComputingPower {
 		System.err.println("Enter the power ");
 		int n = 1;
 		n = sc.nextInt();
-
+		sc.close();
 		System.err.println("Computed Power with naive method : " + powerNaive(x, n));
 		System.err.println("Computed Power with efficient method : " + powerEfficient(x, n));
 

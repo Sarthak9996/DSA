@@ -9,6 +9,7 @@ public class AllDivisorsOfNumber {
 		System.err.println("Enter the number ");
 		int a = 1;
 		a = sc.nextInt();
+		sc.close();
 		printDivisorsNaive(a);
 		printDivisorsNoOrder(a);
 		printDivisorInOrder(a);

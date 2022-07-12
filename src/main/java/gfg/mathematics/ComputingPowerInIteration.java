@@ -12,7 +12,7 @@ public class ComputingPowerInIteration {
 		System.err.println("Enter the power");
 		int n = 1;
 		n = sc.nextInt();
-		
+		sc.close();
 		System.err.println("Value by using the iterative method : " + power(x, n));
 	}
 

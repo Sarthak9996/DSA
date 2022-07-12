@@ -8,12 +8,12 @@ public class PalindromeNumber {
 		System.err.println("Enter the number : ");
 		int n = 101;
 		n = sc.nextInt();
-
+		sc.close();
 		int rev = 0;
 		rev = reverseOfNumber(n);
 		if (rev == n) {
 			System.err.println("Number is palindrome!!");
-		}else {
+		} else {
 			System.err.println("Number is not palindrome!!");
 		}
 	}

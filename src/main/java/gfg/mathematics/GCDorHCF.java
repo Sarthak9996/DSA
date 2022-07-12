@@ -13,7 +13,7 @@ public class GCDorHCF {
 		System.err.println("Enter the second number : ");
 		int b = 1;
 		b = sc.nextInt();
-
+		sc.close();
 		System.err.println("GCD or HCF by naive method taking minimum and doing -- and % : " + hcf(a, b));
 		System.err.println("GCD or HCF by euclid : " + hcfByEuclid(a, b));
 		System.err.println("GCD or HCF by euclid : " + hcfByOptimisedEuclid(a, b));
