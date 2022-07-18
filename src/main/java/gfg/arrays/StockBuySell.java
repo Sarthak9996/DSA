@@ -19,7 +19,18 @@ public class StockBuySell {
 		sc.close();
 
 		System.err.println("Maximum Profit by Naive Method : " + maxProfitNaive(ar, 0, ar.size() - 1));
-		System.err.println("Maximum Profit by Efficient Method : " + maxProfitEfficient(ar));
+		try {
+			Thread.sleep(1000);
+			System.err.println("Maximum Profit by Efficient Method : " + maxProfitEfficient(ar));
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		try {
+			Thread.sleep(1000);
+			stockBuySell(ar);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 	}
 
 	static Integer maxProfitNaive(ArrayList<Integer> ar, int start, int end) {
@@ -47,5 +58,28 @@ public class StockBuySell {
 			}
 		}
 		return profit;
+	}
+
+	static void stockBuySell(ArrayList<Integer> price) {
+//		A[] = { 100, 180, 260, 310, 40, 535, 695 }
+//		(0 3) (4 6)
+		Boolean ismin = false;
+		Boolean ismax = false;
+		System.err.print("Days to buy and sell : ");
+		for (int i = 1; i < price.size(); i++) {
+			if (price.get(i) > price.get(i - 1)) {
+				if (!ismin) {
+					ismin = true;
+					ismax = true;
+					System.out.print("(" + (i - 1) + " ");
+				}
+			} else if (price.get(i) < price.get(i - 1) && ismax) {
+				System.out.print((i - 1) + ") ");
+				ismin = false;
+				ismax = false;
+			}
+		}
+		if (price.get(price.size() - 1) > price.get(price.size() - 2))
+			System.out.print((price.size() - 1) + ") ");
 	}
 }
