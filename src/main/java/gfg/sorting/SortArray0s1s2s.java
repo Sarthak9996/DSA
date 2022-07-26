@@ -1,6 +1,9 @@
 package gfg.sorting;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.Scanner;
 
 public class SortArray0s1s2s {
@@ -17,6 +20,31 @@ public class SortArray0s1s2s {
 		}
 		System.err.println("Unsorted array is : " + ar.toString());
 		sortedArray(ar);
+	}
+
+	public void sortColors(int[] nums) {
+
+		int low = 0, mid = 0, high = nums.length - 1;
+
+		while (mid <= high) {
+			if (nums[mid] == 0) {
+				// swap
+				int temp = nums[low];
+				nums[mid] = nums[low];
+				nums[low] = temp;
+				low++;
+				mid++;
+			} else if (nums[mid] == 1) {
+				low++;
+			} else {
+				// swap
+				int temp = nums[high];
+				nums[mid] = nums[high];
+				nums[high] = temp;
+				high--;
+			}
+		}
+
 	}
 
 	static void sortedArray(ArrayList<Integer> ar) {

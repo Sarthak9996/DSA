@@ -1,5 +1,7 @@
 package gfg.linkedList.DoublyLinkedList;
 
+import gfg.linkedList.DoublyLinkedList.InsertAtBeginningOfDoublyLinkedList.DNode;
+
 public class SimpleImplementationOfDoublyLinkedList {
 
 	static class DNode {
@@ -23,5 +25,16 @@ public class SimpleImplementationOfDoublyLinkedList {
 		temp1.prev = head;
 		temp1.next = temp2;
 		temp2.prev = temp1;
+		
+		System.err.print("The list is : ");
+		printDLL(head);
+	}
+	
+	static void printDLL(DNode head) {
+		if (head == null) {
+			return;
+		}
+		System.err.print(head.data + " ");
+		printDLL(head.next);
 	}
 }
