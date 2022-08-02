@@ -18,9 +18,13 @@ public class ReverseAQueue {
 		queue.add(15);
 		queue.add(20);
 
+		print(queue);
+		System.err.print("\n");
 		reversequeue(queue);
 		print(queue);
 		System.err.println();
+		reverseRecursive(queue);
+		System.err.print("\n");
 		reverseRecursive(queue);
 		print(queue);
 
